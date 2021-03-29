@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Portfolio</title>
+		 <link rel="shortcut icon" type="image/ico" href="./images/JB-logo.png">
+	</head>
+	<link rel="stylesheet" href="style.css"/>
+	<body>
+		<nav class="nav-bar">
+			<div class="brand-title"> <a href="#home">JB</a> </div>
+			</a><img class="toggle-btn" src="./images/menu.png" alt="menu button">
+			<div class="nav-bar-links">
+				<ul>
+					<li><a href="#home">HOME</a></li>
+					<li><a href="#about">ABOUT</a></li>
+					<li><a href="#projects">PROJECTS</a></li>
+					<li><a href="#contact">CONTACT</a></li>
+				</ul>
+			</div>
+		</nav>
+
+
+		<header id="home">
+			<div class="content">
+				<p>
+				Hello ,I'm <span class="highlight">Joshua Benedict</span>. <br />
+				I'm a front End Web Developer.
+			</p>
+			<a href="#about" class="link">View my work </a>
+			</div>
+
+			<div class="image-container">
+				<div class="img">
+				<img src="./images/2.svg" alt="boy on computer">
+			</div>
+			</div>
+		</header>
+
+		<div id="about">
+			<div class="about-title">
+				<p>About me</p>
+				<h2>Personal Info</h2>
+				<p>Get to know more about me</p>
+			</div>
+			<div class="skill-container">
+				<div class="about-content">
+					<h2>Hello!</h2>
+					<p>
+					I have a passion for creating dynamic, intuitive and responsive user
+					experiences.I enjoy learning new skills and staying connected with my fellow
+					developers.
+					</p>
+					<p>
+						Let's make something special.
+					</p>
+				</div>
+				<div class="technical">
+					<h2>Skills</h2>
+					<ul>
+						<li>HTML5</li>
+						<li>css</li>
+						<li>Javascript</li>
+						<li>Jquery</li>
+						<li>Git</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="projects">
+			<div class="about-title">
+				<p>Works</p>
+				<h2>Latest Projects.</h2>
+				<p>Here you can find some of the latest projects that i created recently</p>
+			</div>
+			<div class="project-container">
+				<div class="project">
+					<div class="project-image"><img src="./images/digiweb.png" alt="Ms Player image"></div>
+					<div class="project-details">
+						<h2>Digital Agency</h2>
+						<p>
+							Digital agency is a web template that i created targeting the digital marketing industry. Made using Html, Css Jquery.
+						</p>
+					</div>
+					<div class="project-btn">
+						<a href=" https://agentoweb.agency" target="_blank">view site</a></button>
+					</div>
+				</div>
+				<div class="project">
+					<div class="project-image"><img src="./images/lebbys.png" alt="image gallery/module image"></div>
+					<div class="project-details">
+						<h2>Restaurant</h2>
+						<p>
+							Lebbys is a web template that i created targeting the restaurant and food industry which anyone can to present their business online. Made using Html, Css Javascript/Jquery.
+						</p>
+					</div>
+					<div class="project-btn">
+						<a href="https://gifted-perlman-6d29d0.netlify.app" target="_blank">view site</a>
+					</div>
+				</div>
+				<div class="project">
+					<div class="project-image"><img src="./images/ingredient.png" alt="Product lister image"></div>
+					<div class="project-details">
+						<h2>Food App</h2>
+						<p>
+							Ingredients is an app that allows you to search for recipes and watch a video that shows you how to prepare the food. It's written in html, css, Javascript and MealDB API.
+						</p>
+					</div>
+					<div class="project-btn">
+						<a href="https://jayb2.com " target="_blank">view site</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="contact-container">
+			<div id="contact">
+					<div class="about-title">
+						<p>Contact</p>
+						<h2>Just say Hi.</h2>
+					</div>
+					<form id="my-form" action="https://formspree.io/f/meqpykqe" method="POST">
+						<input type="text" name="name" placeholder="Enter name"/>
+						<input type="email" name="email" required="required" placeholder="Email"/>
+						<textarea required="required"  placeholder="Your Message..."></textarea>
+						<button id="button">Submit</button>
+					</form>
+				<p id="status"></p>
+			</div>
+		</div>
+		<footer>
+			<p id="year"></p>
+		</footer>
+		<script src="./assets/jquery/jquery-3.5.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
