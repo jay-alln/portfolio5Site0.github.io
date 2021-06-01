@@ -176,4 +176,4 @@ gsap.from("#my-form input, textarea, #button", {
  }
 // footer
 const year = new Date();
-document.querySelector("#year").textContent = "copyright @ " + year.getFullYear() + " all rights reserved.";
+document.querySelector("#year").innerHTML = "&copy " + year.getFullYear() + " All rights reserved.";
