@@ -99,7 +99,7 @@ header p {
 	letter-spacing: 0.1rem;
 	width: 100%;
 	margin: 2em auto;
-	text-align: center;
+/* 	text-align: center; */
 }
 header p .highlight {
 	color: #0e9172;
