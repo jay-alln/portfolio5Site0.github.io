@@ -499,6 +499,10 @@ footer {
         margin: 20px 0;
         font-size: 25px;
     }
+	.navbar .menu li a:hover,
+	.navbar.sticky .menu li a:hover{
+		color: 	crimson;
+	}
 	.navbar.sticky .menu li a {
 		color: #000;
 	}
@@ -570,7 +574,7 @@ footer {
 	}
 	#home p .highlight {
 		font-size: 32px;
-		color: crimson;
+		color: #0e9172;
 	}
 	.about-content, .right {
 		padding: 0;
