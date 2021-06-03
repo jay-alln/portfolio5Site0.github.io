@@ -558,7 +558,7 @@ footer {
 		color: #fff;
 	}
 	header p .highlight {
-		font-size: 23px;
+		font-size: 230px;
 	}
 	
 	.link {
@@ -567,6 +567,10 @@ footer {
 	}
 	.link::after {
 		border: 2px solid #fff;
+	}
+	#home p .highlight {
+		font-size: 32px;
+		color: teal;
 	}
 	.about-content, .right {
 		padding: 0;
@@ -594,10 +598,6 @@ footer {
 	#home p {
 		font-size: 21px;
 	}
-	#home p .highlight {
-		font-size: 32px;
-		color: #0e9172;
-	}
 	#about .bars {
 		padding: 1em;
 		align-self: center;
@@ -610,7 +610,7 @@ footer {
 		width: 300px;
 	}
 	.title {
-/* 		font-size: 21px; */
+		/* font-size: 21px; */
 		margin: 0;
 	}
 	.title::after {
@@ -632,6 +632,7 @@ footer {
 	}
 	footer {
 		margin: 0;
+		/* padding: 1em; */
 		font-size: 12px;
 	}
 }
