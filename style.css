@@ -610,7 +610,7 @@ footer {
 		width: 300px;
 	}
 	.title {
-		font-size: 21px;
+/* 		font-size: 21px; */
 		margin: 0;
 	}
 	.title::after {
