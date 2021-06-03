@@ -1,132 +1,43 @@
-// nav bar
-// window.addEventListener("scroll", () => {
-// 	const navbar = document.querySelector(".nav-bar");
-// 	navbar.classList.toggle("sticky", window.scrollY > 0);
-// });
-
 
 $(document).ready(function(){
-	$(".toggle-btn").click(function () {
-		$(".nav-bar-links").toggle("active");
-	});
-
 	$(window).scroll(function () {
-		let pos = $(window).scrollTop();
-		if (pos >= 10) {
-			$(".nav-bar").addClass("sticky");
+		// sticky navbar on scroll script
+		if (this.scrollY > 20) {
+			$(".navbar").addClass("sticky");
 		} else {
-			$(".nav-bar").removeClass("sticky");
+			$(".navbar").removeClass("sticky");
+		}
+
+		// scroll-up button show/hide script
+		if (this.scrollY > 500) {
+			$(".scroll-up-btn").addClass("show");
+		} else {
+			$(".scroll-up-btn").removeClass("show");
 		}
 	});
-});
- 
 
-// toggle button
-// const toggleButton = document.getElementsByClassName("toggle-btn")[0];
-// const link = document.getElementsByClassName("nav-bar-links")[0];
+	// slide-up script
+	$(".scroll-up-btn").click(function () {
+		$("html").animate({ scrollTop: 0 });
+		// removing smooth scroll on slide-up button click
+		$("html").css("scrollBehavior", "auto");
+	});
 
-// toggleButton.addEventListener("click", () => {
-// 	link.classList.toggle("active");
-// });
+	$(".navbar .menu li a").click(function () {
+		// applying again smooth scroll on menu items click
+		$("html").css("scrollBehavior", "smooth");
+	});
 
+	// toggle menu/navbar script
+	$(".menu-btn").click(function () {
+		$(".navbar .menu").toggleClass("active");
+		$(".menu-btn i").toggleClass("active");
+	});
 
-
-// animation
-gsap.to("#home p", {
-	y: -80,
-	duration: 1,
-	scrollTrigger: {
-		trigger: ".link",
-		scrub: 1,
-		start: "top 53%",
-		end: "bottom 30%",
-	},
 });
 
-gsap.from("#about .about-title", {
-	y: 50,
-	opacity: 0,
-	duration: 1,
-	stagger:1,
-	scrollTrigger: {
-		trigger: ".about-title",
-		// scrub: 1,
-		// markers: true,
-		start: "top 70%",
-		end: "top 40%",
-	},
-});
-gsap.from(".technical", {
-	x: "-80px",
-	opacity: 0,
-	duration: 1,
-	scrollTrigger: {
-		trigger: ".technical",
-		// scrub: 1,
-		start: "top 100%",
-		end: "top 70%",
-	},
-});
-gsap.from(".about-content", {
-	y: "80px",
-	opacity: 0,
-	duration: 1,
-	scrollTrigger: {
-		trigger: ".about-content",
-		// scrub: 1,
-		start: "top 100%",
-		end: "top 70%",
-	},
-});
 
-gsap.from("#projects .about-title", {
-	y: 50,
-	opacity: 0,
-	duration: 1,
-	scrollTrigger: {
-		trigger: "#projects",
-		// scrub: 1,
-		// markers: true,
-		start: "top 70%",
-		end: "top 40%",
-	},
-});
-gsap.from("#contact .about-title", {
-	y: 50,
-	opacity: 0,
-	duration: 1,
-	scrollTrigger: {
-		trigger: "#contact",
-		// scrub: 1,
-		// markers: true,
-		start: "top 70%",
-		end: "top 40%",
-	},
-});
 
-gsap.from(".project", {
-	y: 50,
-	opacity: 0,
-	stagger: 0.5,
-	duration: 1,
-	scrollTrigger: {
-		trigger: ".project-image",
-		start: "top 70%",
-		end: "top 40%",
-	},
-});
-
-gsap.from("#my-form input, textarea, #button", {
-	y: 50,
-	opacity: 0,
-	stagger: 0.5,
-	duration: 1,
-	scrollTrigger: {
-		trigger: "#my-form",
-		start: "top 70%",
-		end: "top 40%",
-	},
-});
 
 // form
  window.addEventListener("DOMContentLoaded", function () {
@@ -177,3 +88,89 @@ gsap.from("#my-form input, textarea, #button", {
 // footer
 const year = new Date();
 document.querySelector("#year").innerHTML = "&copy " + year.getFullYear() + " All rights reserved.";
+
+// animation
+	gsap.to("#home p", {
+		y: -80,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".link",
+			scrub: 1,
+			start: "top 53%",
+			end: "bottom 30%",
+		},
+	});
+
+	gsap.from("#about .title", {
+		y: 50,
+		opacity: 0,
+		duration: 1,
+		stagger: 1,
+		scrollTrigger: {
+			trigger: ".title",
+			scrub: 1,
+			// markers: true,
+			start: "top 70%",
+			end: "top 40%",
+		},
+	});
+	gsap.from("#projects .title", {
+		y: 50,
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: "#projects",
+			scrub: 1,
+			// markers: true,
+			start: "top 70%",
+			end: "top 40%",
+		},
+	});
+	gsap.from("#contact .title", {
+		y: 50,
+		opacity: 0,
+		duration: 1,
+		stagger: 1,
+		scrollTrigger: {
+			trigger: "#contact",
+			scrub: 1,
+			// markers: true,
+			start: "top 70%",
+			end: "top 40%",
+		},
+	});
+
+	gsap.from(".right", {
+		x: "80px",
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".right",
+			// scrub: 1,
+			start: "top 100%",
+			end: "top 70%",
+		},
+	});
+	gsap.from(".about-content", {
+		x: "-80px",
+		opacity: 0,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".about-content",
+			// scrub: 1,
+			start: "top 100%",
+			end: "top 70%",
+		},
+	});
+	
+	gsap.from(".project", {
+		y: 50,
+		opacity: 0,
+		stagger: 0.5,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".project-image",
+			start: "top 70%",
+			end: "top 40%",
+		},
+	});
