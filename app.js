@@ -85,11 +85,19 @@ $(document).ready(function(){
 		};
 		xhr.send(data);
  }
+
+//  vanilla tilt
+ VanillaTilt.init(document.querySelectorAll(".tilt"), {
+		max: 25,
+ });
+ 
 // footer
 const year = new Date();
 document.querySelector("#year").innerHTML = "&copy " + year.getFullYear() + " All rights reserved.";
 
 // animation
+	 gsap.registerPlugin(ScrollTrigger);
+
 	gsap.to("#home p", {
 		y: -80,
 		duration: 1,
@@ -101,20 +109,33 @@ document.querySelector("#year").innerHTML = "&copy " + year.getFullYear() + " Al
 		},
 	});
 
-	gsap.from("#about .title", {
+	gsap.from("#about .heading", {
 		y: 50,
 		opacity: 0,
 		duration: 1,
 		stagger: 1,
 		scrollTrigger: {
-			trigger: ".title",
+			trigger: ".heading",
 			scrub: 1,
 			// markers: true,
 			start: "top 70%",
 			end: "top 40%",
 		},
 	});
-	gsap.from("#projects .title", {
+	gsap.from("#services .heading", {
+		y: 50,
+		opacity: 0,
+		duration: 1,
+		stagger: 1,
+		scrollTrigger: {
+			trigger: "#services",
+			scrub: 1,
+			// markers: true,
+			start: "top 70%",
+			end: "top 40%",
+		},
+	});
+	gsap.from("#projects .heading", {
 		y: 50,
 		opacity: 0,
 		duration: 1,
@@ -126,7 +147,7 @@ document.querySelector("#year").innerHTML = "&copy " + year.getFullYear() + " Al
 			end: "top 40%",
 		},
 	});
-	gsap.from("#contact .title", {
+	gsap.from("#contact .heading", {
 		y: 50,
 		opacity: 0,
 		duration: 1,
@@ -170,6 +191,18 @@ document.querySelector("#year").innerHTML = "&copy " + year.getFullYear() + " Al
 		duration: 1,
 		scrollTrigger: {
 			trigger: ".project-image",
+			start: "top 70%",
+			end: "top 40%",
+		},
+	});
+
+	gsap.from(".box", {
+		y: 50,
+		opacity: 0,
+		stagger: 0.5,
+		duration: 1,
+		scrollTrigger: {
+			trigger: ".box-container",
 			start: "top 70%",
 			end: "top 40%",
 		},
