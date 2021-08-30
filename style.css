@@ -21,11 +21,10 @@ body {
 	background: #f8f8f8;
 }
 /* all similar content styling codes */
-.max-width,
-header {
-	max-width: 1300px;
-	padding: 0 80px;
-	margin: auto;
+.max-width {
+	width: 100%;
+	max-width: 90%;
+	margin: 0 auto;
 }
 .heading {
 	text-align: center;
@@ -104,10 +103,10 @@ header {
 header {
 	position: relative;
 	height: calc(100vh);
-	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 10px;
+	padding: 0 80px;
 }
 header #particles-js{
     position: absolute;
